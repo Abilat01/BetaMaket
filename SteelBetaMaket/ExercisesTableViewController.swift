@@ -9,10 +9,8 @@ import UIKit
 
 class ExercisesTableViewController: UITableViewController {
     
-    let exercisesNameArray = ["Боковая планка", "Выпады с гирями", "Жим гирь стоя", "Жим лежа на полу", "Махи гирями",
-                              "Молотки", "Обратные скручивания", "Приседания на одной ноге", "Приседания плие", "Русские махи гирей",
-                              "Рывок гири в стойку", "Сгибания обратным хватом", "Скручивания", "Становая тяга", "Тяга к подбородку",
-                              "Тяга к подбородку из приседа"]
+    let exercisesNameArray = nameArray()
+    let exercisesDetailArray = detailArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +21,16 @@ class ExercisesTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercisesNameArray.count
+        return exercisesNameArray.Array.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ExercisesCell
         
-        cell.exercisesImages.image = UIImage(named: exercisesNameArray[indexPath.row])
+        cell.exercisesImages.image = UIImage(named: exercisesNameArray.Array[indexPath.row])
         
-        cell.exercisesLabel.text = exercisesNameArray[indexPath.row]
+        cell.exercisesLabel.text = exercisesNameArray.Array[indexPath.row]
         cell.exercisesImages.layer.cornerRadius = cell.exercisesImages.frame.size.height / 2
         cell.clipsToBounds = true
         
@@ -42,10 +40,17 @@ class ExercisesTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue)  {
+        
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let detailVC = segue.destination as! ExercisesDetailVC
+                detailVC.exercisesTitle = exercisesNameArray.Array[indexPath.row]
+                detailVC.exercisesDescroption = exercisesDetailArray.Array[indexPath.row]
+            }
+        }
+    }
 }
