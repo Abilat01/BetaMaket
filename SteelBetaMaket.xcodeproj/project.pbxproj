@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B097540267F8F830034D1D9 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09753F267F8F830034D1D9 /* WorkoutTableViewController.swift */; };
 		3B103E35267E55FF00A97952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B103E34267E55FF00A97952 /* AppDelegate.swift */; };
 		3B103E37267E55FF00A97952 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B103E36267E55FF00A97952 /* SceneDelegate.swift */; };
 		3B103E3C267E55FF00A97952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B103E3A267E55FF00A97952 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B09753F267F8F830034D1D9 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		3B103E31267E55FF00A97952 /* SteelBetaMaket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteelBetaMaket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B103E34267E55FF00A97952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B103E36267E55FF00A97952 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				3BB4E859267E86640059CA41 /* Delegate */,
 				3BB4E85B267E868E0059CA41 /* Exercises */,
+				3B09753F267F8F830034D1D9 /* WorkoutTableViewController.swift */,
 				3B103E3A267E55FF00A97952 /* Main.storyboard */,
 				3B103E3D267E560000A97952 /* Assets.xcassets */,
 				3B103E3F267E560000A97952 /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 			files = (
 				3B103E4F267E72DC00A97952 /* ExercisesNameArray.swift in Sources */,
 				3B103E49267E585F00A97952 /* ExercisesTableViewController.swift in Sources */,
+				3B097540267F8F830034D1D9 /* WorkoutTableViewController.swift in Sources */,
 				3B103E4B267E587F00A97952 /* ExercisesCell.swift in Sources */,
 				3B103E4D267E6AA000A97952 /* ExercisesDetailVC.swift in Sources */,
 				3B103E35267E55FF00A97952 /* AppDelegate.swift in Sources */,
